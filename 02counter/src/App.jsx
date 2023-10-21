@@ -8,8 +8,13 @@ function App() {
 
 
  const addOne = () => {
-    if(counter >=20) return;
-    setCounter(counter + 1);
+    if(counter >= 20) return;
+    // setMethod always carry a callback function and the parameter of that callback function always carry the previous value of the variable. 
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter(counter + 1)
+
  }
 
  const subOne = () => {
