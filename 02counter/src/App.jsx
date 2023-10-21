@@ -22,7 +22,7 @@ function App() {
     <>
       {counter}
       <h1>chai aur code</h1>
-      <h2>Counter: {counter}</h2>
+      <h2 onClick={addOne}>Counter: {counter}</h2>
 
       <button onClick={addOne}>Increase: {counter}</button>
       <button onClick={subOne}>Decrase: {counter}</button>
