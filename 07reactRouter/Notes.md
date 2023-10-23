@@ -59,6 +59,7 @@ export default Layout
 # data Loader in React-Route-dom
 - API call.
 - it takes a callback function or method.
+- useLoaderData() hook
 - ye element per over hone ke time he trigger ho jata hai. 
 - it starts feteching data for db or something else as you do hover on that element.
 - little faster than useEffect.
