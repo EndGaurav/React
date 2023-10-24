@@ -10,8 +10,9 @@ function App() {
   // useRef hook
   // The useRef Hook is a function that returns a mutable ref object whose . current property is initialized with the passed argument ( initialValue ).
   const passwordRef = useRef(null);
-
+  
   // useCallback is a React Hook that lets you cache a function definition between re-renders.
+  // jin jin variable se hum baat karte hai, un variables ko hum as dependency pass kar dete hai useCallback hook m.
   const passwordGenerator = useCallback(() => {
     let pass = ''
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -33,7 +34,6 @@ function App() {
   },
     [numberAllowed, specialCharAllowed, length, setPassword],
   )
-  // jin jin variable se hum baat karte hai, un variables ko hum as dependency pass kar dete hai useCallback hook m.
 
   const copyPasswordToClipboard = useCallback(() => {
     // useRef is used for inhancing user experience.
@@ -43,7 +43,7 @@ function App() {
   }, [password])
 
 
-  //   The useEffect hook in React is used to perform side effects in functional components.
+  // The useEffect hook in React is used to perform side effects in functional components.
   // It allows you to handle things like data fetching, subscriptions, or manually changing the DOM.
   // you can think of useEffect as a way to tell React, "Hey, I want to do something after the component has rendered or when some specific data/state changes."
   useEffect(() => { passwordGenerator() }, [numberAllowed, specialCharAllowed, length, passwordGenerator])
