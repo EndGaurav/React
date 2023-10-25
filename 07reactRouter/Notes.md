@@ -47,7 +47,7 @@ const Layout = () => {
         {/* Layout is used for rendering component dynamically. */}
         {/* if you want top two component behave like static, so you can use Layout after rendering those two component. */}
         {/* its up to you how you wanna render components. */}
-        <Layout />
+        <Outlet />
         <Footer />
     </>
   )
@@ -59,8 +59,8 @@ export default Layout
 # data Loader in React-Route-dom
 - API call.
 - it takes a callback function or method.
-- useLoaderData() hook
-- ye element per over hone ke time he trigger ho jata hai. 
-- it starts feteching data for db or something else as you do hover on that element.
+- useLoaderData() hook from react-router-dom.
+- ye element per hover hone ke time he trigger ho jata hai. 
+- it starts feteching data from db or something else as you do hover on that element.
 - little faster than useEffect.
 - good for optimization.
